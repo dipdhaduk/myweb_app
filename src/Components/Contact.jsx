@@ -1,6 +1,6 @@
 import axios from 'axios';
+import React, { useState } from 'react'
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 export default function Contact() {
 
@@ -40,29 +40,24 @@ export default function Contact() {
   <div>
     <nav className="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
       <div className="container">
-        <Link className="navbar-brand" to="/">Furni<span>.</span></Link>
+        <a className="navbar-brand" href="index.html">Furni<span>.</span></a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />
         </button>
         <div className="collapse navbar-collapse" id="navbarsFurni">
           <ul className="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
             <li className="nav-item">
-              <Link className="nav-link" to="/">Home</Link>
+              <a className="nav-link" href="index.html">Home</a>
             </li>
-            <li><Link className="nav-link" to="/shop">Shop</Link></li>
-            <li><Link className="nav-link" to="/about">About us</Link></li>
-            <li><Link className="nav-link" to="/service">Services</Link></li>
-            <li><a className="nav-link" href="#">Blog</a></li>
-            <li className="active"><Link className="nav-link" to="/contact">Contact us</Link></li>
+            <li><a className="nav-link" href="shop.html">Shop</a></li>
+            <li><a className="nav-link" href="about.html">About us</a></li>
+            <li><a className="nav-link" href="services.html">Services</a></li>
+            <li><a className="nav-link" href="blog.html">Blog</a></li>
+            <li className="active"><a className="nav-link" href="contact.html">Contact us</a></li>
           </ul>
           <ul className="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-            <li><Link className="nav-link" to="/login" style={{display: 'flex', alignItems: 'center'}}><img src="images/user.svg" alt="Login" /></Link></li>
-            <li><Link className="nav-link" to="/wishlist" style={{display: 'flex', alignItems: 'center'}}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16" style={{color: '#fff', pointerEvents: 'none'}}>
-                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
-              </svg>
-            </Link></li>
-            <li><Link className="nav-link" to="/cart" style={{display: 'flex', alignItems: 'center'}}><img src="images/cart.svg" alt="Cart" /></Link></li>
+            <li><a className="nav-link" href="#"><img src="images/user.svg" /></a></li>
+            <li><a className="nav-link" href="cart.html"><img src="images/cart.svg" /></a></li>
           </ul>
         </div>
       </div>
@@ -76,7 +71,7 @@ export default function Contact() {
             <div className="intro-excerpt">
               <h1>Contact</h1>
               <p className="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
-              <p><a href="#" className="btn btn-secondary me-2">Shop Now</a><a href="#" className="btn btn-white-outline">Explore</a></p>
+              <p><a href className="btn btn-secondary me-2">Shop Now</a><a href="#" className="btn btn-white-outline">Explore</a></p>
             </div>
           </div>
           <div className="col-lg-7">
