@@ -1,68 +1,91 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ================= PRODUCT GRID FIX ================= */
+.product-section .row,
+.untree_co-section .row {
+  row-gap: 40px;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
+/* PRODUCT CARD */
+.product-item {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+  height: 100%;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.product-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+/* IMAGE FIX */
+.product-thumbnail {
+  max-height: 180px;
+  object-fit: contain;
+  margin: 0 auto 15px;
+  display: block;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+/* TITLE */
+.product-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  min-height: 40px;
+}
+
+/* PRICE */
+.product-price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #3b5d50;
+}
+
+/* REMOVE RANDOM ICON OVERLAP */
+.icon-cross {
+  position: static;
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ================= SHOP PAGE GRID ================= */
+.shop-products .col-lg-3,
+.product-section .col-lg-3 {
+  display: flex;
+}
+
+/* ================= SERVICE FEATURES ALIGN ================= */
+.feature {
+  height: 100%;
+  text-align: center;
+}
+
+.feature .icon {
+  margin-bottom: 15px;
+}
+
+/* ================= HERO SPACING FIX ================= */
+.hero {
+  padding: 100px 0;
+}
+
+.intro-excerpt {
+  padding-top: 40px;
+}
+
+/* ================= MOBILE FIX ================= */
+@media (max-width: 768px) {
+  .product-thumbnail {
+    max-height: 150px;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+
+  .hero h1 {
+    font-size: 32px;
   }
 }
